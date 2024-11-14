@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+    <style>
+        .form-container {
+            margin: 20px;
+        }
+        .section-container {
+            margin: 20px solid silver;
+            border: 1px solid goldenrod;
+            padding: 10px solid #CD7F32;
+        }
+    </style>
+    <script>
+        function mostrarDatos() {
+            var nombre = document.getElementById("nombre").value;
+            var edad = document.getElementById("edad").value;
+            var sexo = document.getElementById("sexo").value;
+            var telefono = document.getElementById("telefono").value;
+            var correo = document.getElementById("correo").value;
+
+            document.getElementById("nombreDisplay").innerText = nombre;
+            document.getElementById("edadDisplay").innerText = edad;
+            document.getElementById("sexoDisplay").innerText = sexo;
+            document.getElementById("telefonoDisplay").innerText = telefono;
+            document.getElementById("correoDisplay").innerText = correo;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Introduce tus datos</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre"><br><br>
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad"><br><br>
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo"><br><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono"><br><br>
+        <label for="correo">Correo electrónico:</label>
+        <input type="text" id="correo"><br><br>
+        <button onclick="mostrarDatos()">Mostrar Datos</button>
+    </div>
+
+    <section class="section-container">
+        <h1>Datos Personales</h1>
+        <p><strong>Nombre:</strong> <span id="nombreDisplay"></span></p>
+        <p><strong>Edad:</strong> <span id="edadDisplay"></span></p>
+        <p><strong>Sexo:</strong> <span id="sexoDisplay"></span></p>
+        <p><strong>Teléfono:</strong> <span id="telefonoDisplay"></span></p>
+        <p><strong>Correo electrónico:</strong> <span id="correoDisplay"></span></p>
+    </section>
+</body>
+</html>

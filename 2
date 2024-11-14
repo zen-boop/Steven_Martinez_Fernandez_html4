@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Artículos</title>
+    <style>
+        .form-container {
+            margin: 20px;
+        }
+        .article-container {
+            margin: 20px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function mostrarDatos() {
+            var titulo1 = document.getElementById("titulo1").value;
+            var contenido1 = document.getElementById("contenido1").value;
+            var titulo2 = document.getElementById("titulo2").value;
+            var contenido2 = document.getElementById("contenido2").value;
+            var titulo3 = document.getElementById("titulo3").value;
+            var contenido3 = document.getElementById("contenido3").value;
+
+            document.getElementById("titulo1Display").innerText = titulo1;
+            document.getElementById("contenido1Display").innerText = contenido1;
+            document.getElementById("titulo2Display").innerText = titulo2;
+            document.getElementById("contenido2Display").innerText = contenido2;
+            document.getElementById("titulo3Display").innerText = titulo3;
+            document.getElementById("contenido3Display").innerText = contenido3;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Introduce los datos de los artículos</h1>
+        <label for="titulo1">Título del Artículo 1:</label>
+        <input type="text" id="titulo1"><br><br>
+        <label for="contenido1">Contenido del Artículo 1:</label>
+        <textarea id="contenido1"></textarea><br><br>
+        <label for="titulo2">Título del Artículo 2:</label>
+        <input type="text" id="titulo2"><br><br>
+        <label for="contenido2">Contenido del Artículo 2:</label>
+        <textarea id="contenido2"></textarea><br><br>
+        <label for="titulo3">Título del Artículo 3:</label>
+        <input type="text" id="titulo3"><br><br>
+        <label for="contenido3">Contenido del Artículo 3:</label>
+        <textarea id="contenido3"></textarea><br><br>
+        <button onclick="mostrarDatos()">Mostrar Datos</button>
+    </div>
+
+    <article class="article-container">
+        <h2 id="titulo1Display"></h2>
+        <p id="contenido1Display"></p>
+    </article>
+    <article class="article-container">
+        <h2 id="titulo2Display"></h2>
+        <p id="contenido2Display"></p>
+    </article>
+    <article class="article-container">
+        <h2 id="titulo3Display"></h2>
+        <p id="contenido3Display"></p>
+    </article>
+</body>
+</html>
